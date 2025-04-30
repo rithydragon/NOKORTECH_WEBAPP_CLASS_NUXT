@@ -1,0 +1,135 @@
+@use './scrollbar';
+@use './variables.scss';  // Ensure this contains variables like --bg-wrapper and others
+@use './main.scss';
+@use './color';  // Make sure this has all your color definitions
+@use './font';  // Make sure this has all your color definitions
+@use './navbar';
+@use './rtytable';
+// @use './table';
+/* Global Styles */
+
+/* Default config dark mode styles */
+
+/* Default (Light Mode) styles */
+html, body {
+  font-family: 'Khmer OS Battambang', sans-serif;
+  // font-family: Poppins, sans-serif;
+  background-color: var(--general-bg-color);
+  color: var(--general-text-color) ;
+  font-size: 16px;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Dark Mode styles */
+body.dark {
+  font-family: 'Khmer OS Battambang', sans-serif;
+  background-color: var(--general-bg-color);
+  color: var(--general-text-color);
+}
+
+// /* Khmer font */
+// body.km-font {
+//   font-family: 'km-os-battambang', sans-serif;
+// }
+
+/* Khmer font */
+body.km-font {
+  font-family: 'Khmer OS Battambang', sans-serif;
+  input,button,textarea,select,select > option{
+    font-family: 'Khmer OS Siemreap', sans-serif;
+    font-size: 14px;
+  }
+  h1{
+    font-family: 'Moul', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    // color: #3a37f8;
+    color: var(--primary-color)
+  };
+  h2{
+    
+  }
+  h3{
+    
+  }
+  h4{
+    
+  }
+  h5{
+    
+  }
+  h6{
+    
+  }
+}
+
+/* English font */
+body.en-font {
+  font-family: 'inter', sans-serif;
+
+  // /* Customize font for Khmer text */
+  // html[lang="km"], body[lang="km"] {
+  //   font-family: 'Khmer OS', 'Moul', 'Nokora', 'Helvetica', 'Arial', sans-serif; /* Khmer font stack */
+  // }
+
+
+  h1{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    // color: #3a37f8;
+    color: var(--primary-color)
+  }
+  h2{
+    
+  }
+  h3{
+    
+  }
+  h4{
+    
+  }
+  h5{
+    
+  }
+  h6{
+    
+  }
+}
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif+Khmer:wght@400;700&display=swap');
+
+/* Define font variables */
+:root {
+  --font-english: 'Noto Sans', sans-serif;
+  --font-khmer: 'Noto Serif Khmer', 'Noto Sans', sans-serif;
+  --font-base: var(--font-english); /* Default to English */
+}
+
+/* Language-based font switching */
+[lang="en"] {
+  --font-base: var(--font-english);
+  font-family: var(--font-english);
+}
+
+[lang="km"] {
+  --font-base: var(--font-khmer);
+  font-family: var(--font-khmer);
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input::placeholder {
+  color: rgba(153, 153, 153,0.7);
+  font-size: 12px;
+}
+
+input:focus::placeholder {
+  color: #333;
+}

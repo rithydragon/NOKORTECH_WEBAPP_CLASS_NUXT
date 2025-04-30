@@ -1,0 +1,133 @@
+[
+  {
+    "title": "dashboard",
+    "icon": "<i class='ri-dashboard-line'></i>",
+    "menu": [
+      {
+        "permission": "DASHBOARD",
+        "id": "nav_dashboard",
+        "title": "dashboard",
+        "icon": "<i class='ri-dashboard-line'></i>",
+        "href": "/Dashboard"
+      }
+    ]
+  },
+  {
+    "title": "system_management",
+    "icon": "<i class='ri-settings-2-line'></i>",
+    "menu": [
+      {
+        "permission": "USER",
+        "id": "nav_user",
+        "title": "user_management",
+        "icon": "<i class='ri-user-3-line'></i>",
+        "href": "/User"
+      },
+      {
+        "permission": "ROLE",
+        "id": "nav_role",
+        "title": "role_management",
+        "icon": "<i class='ri-user-star-line'></i>",
+        "href": "/Role"
+      },
+      {
+        "permission": "PERMISSION",
+        "id": "nav_permission",
+        "title": "permission_management",
+        "icon": "<i class='ri-lock-2-line'></i>",
+        "href": "/Permission"
+      },
+      {
+        "permission": ""
+      }
+    ]
+  },
+  {
+    "title": "student_and_enrollment",
+    "icon": "<i class='ri-graduation-cap-line'></i>",
+    "menu": [
+      {
+        "permission": "ENROLLMENT",
+        "color": "#F67D62",
+        "id": "nav_enrollment",
+        "title": "enrollment",
+        "icon": "<i class='ri-article-line'></i>",
+        "href": "/Enrollment"
+      },
+      {
+        "permission": "STUDENT",
+        "id": "nav_student",
+        "title": "student",
+        "icon": "<i class='ri-user-2-line'></i>",
+        "href": "/Student",
+        "showGlobal": true
+      },
+      {
+        "permission": "STUDENTCLASS",
+        "id": "nav_student_class",
+        "title": "student_and_class",
+        "icon": "<i class='ri-presentation-line'></i>",
+        "href": "/StudentClass"
+      },
+      {
+        "permission": "ENROLL_NEXT_LEVEL",
+        "id": "nav_enroll_next_level",
+        "title": "enroll_next_level",
+        "icon": "<i class='ri-contacts-book-upload-line'></i>",
+        "href": "/EnrollNextLevel"
+      },
+      {
+        "permission": "CLASS_ARRANGEMENT",
+        "id": "nav_assign_class",
+        "title": "class_arrangement",
+        "icon": "<i class='ri-door-open-line'></i>",
+        "href": "/ClassArrangement",
+        "showGlobal": true
+      },
+      {
+        "permission": "SCHEDULE_CHANGE_CLASS",
+        "id": "nav_schedule_change_class",
+        "title": "schedule_change_class",
+        "icon": "<i class='ri-calendar-schedule-line'></i>",
+        "href": "/ScheduleChangeClass",
+        "showGlobal": true
+      },
+      {
+        "permission": "GUARDIAN",
+        "id": "nav_guardian",
+        "title": "guardian",
+        "icon": "<i class='ri-user-3-line'></i>",
+        "href": "/guardian"
+      },
+      {
+        "permission": "SCREENPICKUP",
+        "id": "nav_screen_pickup",
+        "title": "screen_pickup",
+        "icon": "<i class='ri-fullscreen-line'></i>",
+        "href": "/ScreenPickup"
+      },
+      {
+        "permission": "DAILY_RECORD",
+        "id": "nav_daily_record",
+        "title": "daily_record",
+        "icon": "<i class='ri-file-history-line'></i>",
+        "href": "/DailyRecord"
+      },
+      {
+        "permission": "DAILY_RECORD_TYPE",
+        "id": "nav_daily_record_type",
+        "title": "daily_record_type",
+        "icon": "<i class='ri-calendar-schedule-line'></i>",
+        "href": "/dailyRecordType"
+      },
+      {
+        "permission": "STUDENT_REPORT",
+        "id": "nav_student_report",
+        "title": "student_report",
+        "icon": "<i class='ri-pie-chart-line'></i>",
+        "href": "/StudentReport",
+        "showGlobal": true
+      }
+    ]
+  }
+]

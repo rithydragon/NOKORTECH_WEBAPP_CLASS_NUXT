@@ -1,0 +1,63 @@
+[
+    {
+      "route": "/Dashboards",
+      "icon": "ri-command-fill text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+      "title": "Dashboard Data",
+      "description": "Manage All Data In Learning System."
+    },
+    {
+      "route": "/LearnerEnrollments",
+      "icon": "ri-user-line text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+      "title": "Learner Enrollment",
+      "description": "Manage All Data Report In Learning System."
+    },
+    {
+      "route": "/Learning_Courses",
+      "icon": "ri-gradienter-line text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+      "title": "Learning Course",
+      "description": "Manage All Data Report In Learning System."
+    },
+    {
+      "route": "/SocialForums",
+      "icon": "ri-camera-lens-line text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+      "title": "Socialboard Forum",
+      "description": "Manage All Data Report In Learning System."
+    },
+    {
+      "route": "/SkillTestings",
+      "icon": "ri-shield-keyhole-line text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+      "title": "Skill Testing",
+      "description": "Manage All Users Data In Learning System."
+    },
+    {
+      "route": "/Payments",
+      "icon": "ri-currency-fill text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+      "title": "Payment",
+      "description": "Manage All Users Data In Learning System."
+    },
+    {
+      "route": "/Financials",
+      "icon": "ri-secure-payment-fill text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+      "title": "Financial",
+      "description": "Manage All Users Data In Learning System."
+    },
+    {
+      "route": "/Employees",
+      "icon": "ri-group-line text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+      "title": "Employee",
+      "description": "Manage All Users Data In Learning System."
+    },
+    {
+      "route": "/User_Privileges",
+      "icon": "ri-user-2-line text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+      "title": "User Privilege",
+      "description": "Manage All Users Data In Learning System."
+    },
+    {
+      "route": "/ReportsAnalytics",
+      "icon": "ri-line-chart-fill text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+      "title": "Report Analytics",
+      "description": "Manage All Data Report In Learning System."
+    }
+  ]
+  

@@ -1,0 +1,88 @@
+@use './color';
+
+$table-border-color: #ddd;
+$table-header-bg: #f4f4f4;
+$table-text-color: #333;
+
+// Dark mode variables
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333;
+  --border-color: #ddd;
+}
+
+.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #f4f4f4;
+  --border-color: #444;
+}
+
+table {
+  border-radius: 10px;
+  border: 1px solid var(--nokor-w-b-2);
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  thead {
+    background-color: $table-header-bg;
+  }
+
+  th,
+  td {
+    padding: 5px 10px;
+    text-align: left;
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  thead>tr>th {
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  tbody>tr>td {
+    font-size: 14px;
+  }
+}
+
+input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+/* Dark mode support */
+.dark input {
+  background-color: #333;
+  color: #fff;
+  border-color: #666;
+}
+
+.dark table {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark th {
+  background-color: #444;
+}

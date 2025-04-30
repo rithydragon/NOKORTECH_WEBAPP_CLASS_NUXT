@@ -1,0 +1,56 @@
+/* assets/css/variables.scss */
+
+// $primary-color: #0070f3;
+// $secondary-color: #f4f4f4;
+// $font-family: Arial, sans-serif;
+// /* assets/css/variables.scss */
+
+@use './color';
+// :root {
+//     --custom-blue-50: hsl(204, 100%, 96%);
+//     --custom-bg-white: #ffffff; /* Define the white color variable */
+// }
+$font-km: 'km-200', sans-serif;
+$font-en: 'en-200', sans-serif;
+
+// assets/scss/variables.scss
+$font-200: 'km-200', sans-serif;
+
+
+.rty-black-text-color{
+    color: var(--text-primary);
+}
+
+.rty-white-text-color{
+    color: var(--neutral-light);
+}
+
+.rty-dark-bg-color{
+    background-color: var(--creative-dark); /* Use the variable */
+}
+
+.rty-light-bg-color{
+    background-color: var(--bg-light);
+}
+
+.card-bg-white {
+    background-color: var(--custom-bg-white); /* Use the variable */
+}
+
+.card-dark-light-white {
+    background-color: var(--custom-bg-white); /* Use the variable */
+}
+
+.custom-bg-blue-50 {
+    background-color: var(--custom-blue-50);
+}
+
+
+/* General styles dark and light mode*/
+// .card-dark-light-white {
+//     background-color: var(--custom-bg-white); /* Background changes with theme */
+//     color: var(--custom-text-color); /* Text color changes with theme */
+//     border-radius: 0.5rem;
+//     padding: 1rem;
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//   }

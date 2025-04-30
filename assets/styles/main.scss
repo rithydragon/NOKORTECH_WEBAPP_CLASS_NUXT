@@ -1,0 +1,255 @@
+@use './color';
+@use './font';
+
+/* Khmer font */
+body.km-font {
+  font-family: 'Battambang', sans-serif;
+}
+
+/* English font */
+body.en-font {
+  font-family: 'Poppins', sans-serif;
+}
+
+// Performance Tip:
+// For the best UX with full reloads, add this CSS to prevent "flash of unstyled content" during reload:
+/* assets/main.css */
+html {
+  opacity: 1;
+  transition: opacity 100ms ease;
+}
+html.is-reloading {
+  opacity: 0;
+}
+
+//Table 
+table {
+  thead tr th {
+    // font-family: var(--font-base); // Ensure headers use correct font
+    font-family: 'Khmer OS Siemreap', sans-serif;
+    font-weight: bold;
+  }
+
+  tbody tr td {
+    // font-family: var(--font-base); // Ensure cells use correct font
+    font-family: 'Khmer OS Battambang', sans-serif;
+  }
+}
+
+/* Default Button Styles */
+button {
+  background-color: #75be53;
+  /* Light mode background color */
+  color: rgb(255, 255, 255);
+  /* Light mode text color */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: rgba(17, 17, 26, 0.02) 0px 1px 0px, rgba(17, 17, 26, 0.06) 0px 0px 5px;
+  ;
+  /* Shadow for light mode */
+
+  &:hover {
+    background-color: #5c9b42;
+    /* Light mode hover color */
+  }
+
+  /* Dark Mode Button Styling */
+  &.dark {
+    background-color: var(--primary-color, #333);
+    /* Default background for dark mode */
+    color: #fff;
+    /* Text color for dark mode */
+
+    &:hover {
+      background-color: #dadbdd;
+      /* Hover color for dark mode */
+    }
+  }
+}
+
+
+/* Light Mode Border */
+.border {
+  border: 1px solid var(--creative-light);
+  /* You can adjust the border thickness */
+  border-color: rgba(var(--creative-light), 0.1);
+  /* 50% opacity for light mode */
+}
+
+/* Global Light & Dark Mode Input Styles */
+:root {
+  --primary-color: #4a90e2;
+  --border-color: #ccc;
+  --text-color: #333;
+  --bg-color: #fff;
+  --placeholder-color: #999;
+}
+
+.dark {
+  --primary-color: #90caf9;
+  --border-color: #555;
+  --text-color: #eee;
+  --bg-color: #1e1e1e;
+  --placeholder-color: #aaa;
+}
+
+$bg-color: #f5f5f5; // Default light color (for fallback)
+
+// input:disabled {
+//   background-color: $bg-color; // Fallback for Sass
+//   background-color: var(--bg-color); // Overrides with CSS variable
+// }
+/* Base input styles */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+
+  &:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+  }
+
+  &:disabled {
+    background-color: var(--bg-color); // Overrides with CSS variable
+    // background-color: lighten(var(--bg-color), 10%);
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: var(--placeholder-color);
+  }
+}
+
+/* Style for Textareas */
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Custom Select */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 24 24' fill='%23999' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 14px;
+  padding-right: 34px;
+}
+
+/* Input inside flex containers */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+/* Dark mode support */
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background-color: var(--bg-color);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+/* Dark Mode Border */
+.dark {
+  .border {
+    border: 0.1px solid var(--creative-light);
+    border-color: 0.5;
+    /* 20% opacity for dark mode */
+  }
+}
+
+
+/* Headings */
+// h1 {
+//   font-weight: bold;
+//   color: #3a37f8;
+// }
+
+
+//General car color
+.rty-card {
+  background-color: var(--neutral-bg) !important;
+  color: var(--general-text-color) !important;
+  border-radius: 10px;
+  overflow: hidden;
+  // box-shadow: 0px 0px 3px 3px var(--shadow-color);
+  margin: 5px;
+  padding: 15px;
+}
+
+// Navbar color
+.rty-navbar-light-bg-color {
+  background-color: var(--neutral-bg);
+  color: var(--general-text-color);
+  border-radius: 15px;
+}
+
+.rty-navbar-dark-bg-color {
+  background-color: var(--neutral-bg);
+  color: var(--general-text-color);
+}
+
+//General car color
+.pagewraper-bg-light-color {
+  background-color: var(--custom-blue-50);
+  color: var(--general-text-color);
+}
+
+.navbar-side {
+  background-color: var(--neutral-bg) !important;
+  color: var(--general-text-color) !important;
+}
+
+.rty-modal {
+  background-color: var(--bg-wrapper) !important;
+  color: var(--general-text-color);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-sizing: border-box;
+  z-index: 50;
+}
+
+
+
+/* assets/css/global.css */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.fullscreen-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}

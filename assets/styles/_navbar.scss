@@ -1,0 +1,153 @@
+// Sidebar Styles
+$bg-sidebar: #1f2937;
+$primary-text: #ffffff;
+$border-color: #4b5563;
+$hover-bg: #374151;
+
+
+:root{
+  --bg-sidebar: #f1f2f3;
+  --primary-text: #ffffff;
+$border-color: #4b5563;
+$hover-bg: #374151;
+}
+
+.dark{
+  --bg-sidebar: #1f2937;
+  --primary-text: #ffffff;
+$border-color: #4b5563;
+$hover-bg: #374151;
+}
+.sidebar {
+  background-color: var(--bg-sidebar);
+  color: var(--primary-text);
+  height: 100vh;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+  padding-top: 1rem;
+  width: 16rem; // Full width when open
+  &--closed {
+    width: 4rem; // Narrow when closed
+  }
+
+  &__title {
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__toggle-btn {
+    background: none;
+    border: none;
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block;
+  }
+
+  &__item {
+    position: relative;
+    border-left: 4px solid transparent;
+    transition: border-color 0.3s;
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      width: 100%;
+      background: none;
+      border: none;
+
+      &:hover {
+        background-color: $hover-bg;
+      }
+    }
+
+    &-children {
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
+      border-left: 2px solid $border-color;
+
+      .sidebar__sub-item {
+        padding: 0.5rem 0;
+        font-size: 0.875rem;
+        cursor: pointer;
+        color: #d1d5db;
+        border-left: 2px solid transparent;
+
+        &:hover {
+          color: #ffffff;
+        }
+
+        &-button {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.5rem;
+          width: 100%;
+          background: none;
+          border: none;
+        }
+
+        &-children {
+          padding-left: 1.5rem;
+          margin-top: 0.5rem;
+          border-left: 2px solid $border-color;
+        }
+      }
+
+      .sidebar__sub-sub-item {
+        padding: 0.5rem 0;
+        font-size: 0.75rem;
+        cursor: pointer;
+        color: #d1d5db;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+
+    &-open {
+      border-color: $border-color;
+    }
+
+    &-children {
+      &-open {
+        border-left: 2px solid $border-color;
+      }
+    }
+  }
+
+  .icon {
+    color: #9ca3af; // Tailwind gray-400
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+  }
+
+  .chevron {
+    transition: transform 0.3s;
+  }
+
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+
+  // Transition for opening/closing the sidebar
+  &.sidebar--open {
+    width: 16rem;
+    transition: width 0.3s ease;
+  }
+  
+  &.sidebar--closed {
+    width: 4rem;
+    transition: width 0.3s ease;
+  }
+  .span{
+    font-size:10px
+  }
+}

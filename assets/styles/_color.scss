@@ -1,0 +1,124 @@
+/*Light Color Mode */
+:root {
+  /* Primary Colors */
+  --primary-color: #3490dc;
+  /* Blue */
+  --secondary-color: #ff5733;
+  /* Red */
+  --accent-color: #f9a825;
+  /* Yellow */
+
+  /* Neutrals */
+  --neutral-bg: #ffffff;
+  --neutral-text: #523c3c;
+
+  /*General Backround Color and Text as Global*/
+  --general-bg-color: #f9f9f9;
+  --general-text-color: #282828;
+  /* Default text color */
+
+  --bg-wrapper: #ffffff;
+  /* Light background color */
+
+  --color-hover: #ffffff;
+
+  /* Creative Colors */
+  --creative-color: #ff80ab;
+  /* Light Pink */
+
+  --shadow-color: #f5f5f5;
+  --border: var(--shadow-color)
+    /* Transition for smooth color changes */
+    // transition: background-color 0.3s ease, color 0.3s ease;
+
+    /* Light Mode Colors */
+    --color-primary: #28a745;
+  --color-secondary: #ffc107;
+  --color-danger: #dc3545;
+  --color-info: #17a2b8;
+  --color-warning: #ffcc00;
+  --color-success: #28a745;
+  --color-text: #000000;
+  --color-background: #ffffff;
+  --color-border: #e0e0e0;
+
+  --nokor-w-b-1: #0a0909;
+  --nokor-w-b-2: #595252;
+  --nokor-w-b-3: hsl(0, 0%, 50%);
+  --nokor-w-b-4: #cbbcbc;
+  --nokor-w-b-5: #ffffff;
+}
+
+/* Dark mode overrides */
+// [dark-mode="dark"] {
+.dark {
+  /* Dark Mode Variables */
+  --primary-color: #0d4a6d;
+  /* Dark Blue */
+  --secondary-color: #c56f6f;
+  /* Dark Red */
+  --accent-color: #a5d6a7;
+  /* Light Green */
+
+  /* Neutrals */
+  --neutral-bg: #251d1d;
+  --neutral-text: #f7fafc;
+
+  --text-primary: #f7fafc;
+  --text-secondary: #e2e8f0;
+
+  /*General Backround Color and Text as Global*/
+  --general-bg-color: #1a202c;
+  --general-text-color: #ffffff;
+  /* Default text color */
+
+  --bg-wrapper: #000000;
+  /* Light background color */
+
+  --color-hover: #ffffff;
+
+  /* Creative Colors */
+  --creative-color: #7f1d1d;
+  /* Dark Red */
+
+  --shadow-color: #531616;
+
+
+  --bg-custom-card: #645e5e;
+  /* Dark Red */
+  --border: var(--color-hover);
+
+
+  /* Dark Mode Colors */
+  --color-primary: #34d399;
+  --color-secondary: #fbbf24;
+  --color-danger: #ef4444;
+  --color-info: #22d3ee;
+  --color-warning: #f59e0b;
+  --color-success: #10b981;
+  --color-text: #ffffff;
+  --color-background: #1a1a1a;
+  --color-border: #333333;
+
+  --nokor-w-b-1: #ffffff;
+  --nokor-w-b-2: #cbbcbc;
+  --nokor-w-b-3: #bab3b3;
+  --nokor-w-b-4: #595252;
+  --nokor-w-b-5: #0a0909;
+}
+
+.color-sub-text {
+  color: var(--nokor-w-b-3);
+}
+
+.color-primary {
+  color: var(--primary-color);
+}
+
+.border-primary {
+  border-color: var(--primary-color);
+}
+
+.table-border {
+  border-color: var(--text-primary);
+}

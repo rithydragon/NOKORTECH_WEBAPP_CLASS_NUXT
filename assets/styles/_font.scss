@@ -1,0 +1,336 @@
+@use 'color';
+@use './variables.scss';
+
+$font-km: 'Inter', sans-serif;
+$font-200: 'Inter', sans-serif;
+$font-en: 'Inter', sans-serif;
+
+// Define font faces
+
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans'), local('NotoSans'),
+    url('/fonts/noto-sans/NotoSans-Regular.woff2') format('woff2'),
+    url('/fonts/noto-sans/NotoSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 700;
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+    url('/fonts/noto-sans/NotoSans-Bold.woff2') format('woff2'),
+    url('/fonts/noto-sans/NotoSans-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Khmer OS Siemreap';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Khmer OS Siemreap'), local('KhmerOSSiemreap'),
+    url('/fonts/khmer-os/KhmerOSsiemreap.woff2') format('woff2'),
+    url('/fonts/khmer-os/KhmerOSsiemreap.woff') format('woff');
+}
+
+// Font family variables
+:root {
+  --font-english: 'Noto Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-khmer: 'Khmer OS Siemreap', 'Noto Sans', sans-serif;
+  --font-base: var(--font-english); // Default to English
+}
+
+// Language-specific font classes
+[lang="en"] {
+  --font-base: var(--font-english);
+  font-family: var(--font-english);
+}
+
+[lang="km"] {
+  --font-base: var(--font-khmer);
+  font-family: var(--font-khmer);
+}
+
+// Base body styles
+body {
+  font-family: var(--font-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode styles */
+body.dark {
+  background-color: #121212;
+  /* Dark background */
+  color: #e0e0e0;
+  /* Light text for dark mode */
+}
+
+// /* Khmer font */
+// body.km-font {
+//   font-family: 'Battambang', sans-serif;
+// }
+
+// /* English font */
+// body.en-font {
+//   font-family: 'Poppins', sans-serif;
+// }
+/* Additional fonts for specific use cases */
+// h1, h2, h3, h4, h5, h6 {
+//   font-family: 'Josefin Sans', serif; /* Example for headings */
+// }
+
+code,
+pre {
+  font-family: 'Roboto Mono', monospace;
+  /* For code snippets */
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: 'km-os-battambang', sans-serif;
+  /* For form inputs */
+}
+
+.khmer-moul {
+  font-family: 'Moul';
+}
+
+// Font-Owner {
+//   Danh Hong:{
+//     Koulen, Moul, Freehand, Battambang,Bayon, Moulpili
+//   }
+// }
+/* Define the Khmer font (km-200) */
+@font-face {
+  font-family: 'km-200';
+  src: url('~assets/fonts/KhmerOSfreehand.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ralyne';
+  src: url('~assets/fonts/Ralyne Demo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'km-os-battambang';
+  src: url('~assets/fonts/KhmerOSbattambang.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Define the Cham font (en-200) */
+@font-face {
+  font-family: 'en-200';
+  src: url('~assets/fonts/NotoSansCham-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'customfont';
+  src: url('~assets/fonts/SourceSansPro-Regular.ttf.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'MyCustomFont', sans-serif;
+}
+
+// from variables.scss
+.font-normal {
+  font-family: $font-200;
+}
+
+/* Apply Khmer font (km-200) */
+.font-normal {
+  font-family: 'km-200', sans-serif;
+}
+
+/* Apply Cham font (en-200) */
+.font-cham {
+  font-family: 'en-200', sans-serif;
+}
+
+
+.font-normal {
+  font-family: $font-km;
+}
+
+.font-cham {
+  font-family: $font-en;
+}
+
+
+.battambang-thin {
+  font-family: "Battambang", system-ui;
+  font-weight: 100;
+  font-style: normal;
+}
+
+;
+
+.battambang-light {
+  font-family: "Battambang", system-ui;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.battambang-regular {
+  font-family: "Battambang", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.battambang-bold {
+  font-family: "Battambang", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.battambang-black {
+  font-family: "Battambang", system-ui;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.moulpali-regular {
+  font-family: "Moulpali", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bayon-regular {
+  font-family: "Bayon", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fasthand-regular {
+  font-family: "Fasthand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.koulen-regular {
+  font-family: "Koulen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// ## Poppins font style
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
