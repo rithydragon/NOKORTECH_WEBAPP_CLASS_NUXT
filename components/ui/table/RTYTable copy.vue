@@ -510,7 +510,7 @@ watch(paginatedData, (val) => {
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/styles/rtytable.scss'; // Make sure you create this file
+@use "@/assets/styles/rtytable.scss" as rtytable; // Make sure you create this file
 
 // Update your SCSS
 .rty-table-container {

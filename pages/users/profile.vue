@@ -65,9 +65,6 @@
 </template>
 
 <script setup>
-
-// Import the store properly
-import  PasswordForm from '~/components/system/User/Profile/PasswordForm.vue'
 import { useUserStore } from '~/stores/user'
 
 const activeTab = ref('profile')

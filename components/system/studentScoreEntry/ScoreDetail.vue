@@ -326,7 +326,7 @@ definePageMeta({
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/_table.scss";
+@use "@/assets/styles/_table.scss" as _table;
 table{
   border-radius: 7px;
   overflow: hidden;

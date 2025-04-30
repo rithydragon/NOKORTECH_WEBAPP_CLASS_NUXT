@@ -711,7 +711,7 @@ const localData = [
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/rtytable.scss";
+@use "@/assets/styles/rtytable.scss" as rtytable;
 
 .no-data {
     color: var(--secondary-color) !important;

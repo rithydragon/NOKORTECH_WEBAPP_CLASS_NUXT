@@ -338,7 +338,7 @@ definePageMeta({ layout: 'layout', middleware: ['auth'], role: "teacher" });
 
 </script>
 <style lang="scss" scoped>
-@import "@/assets/styles/table.scss";
+@use "@/assets/styles/table.scss" as table;
 
 
 input {

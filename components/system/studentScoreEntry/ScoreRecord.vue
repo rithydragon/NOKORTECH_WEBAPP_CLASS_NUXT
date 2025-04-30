@@ -475,7 +475,7 @@ definePageMeta({
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/table.scss";
+@use "@/assets/styles/table.scss" as table;
 
 select:required:invalid {
   color: gray;

@@ -21,8 +21,9 @@ export default defineNuxtConfig({
     port: 4582,  // Port for dev server
     host: '0.0.0.0',  // Allow external devices to access the development server
   },
-
   vite: {
+    assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf'],
+
     server: {
       host: '0.0.0.0',
       hmr: {

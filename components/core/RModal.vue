@@ -480,7 +480,7 @@ $modal-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275) !default;
       color: white;
       
       &:not([disabled]):hover {
-        background-color: darken($btn-primary, 10%);
+        background-color: var(--nokor-w-b-5);
         transform: translateY(-1px);
       }
     }
@@ -490,7 +490,7 @@ $modal-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275) !default;
       color: white;
       
       &:not([disabled]):hover {
-        background-color: darken($btn-danger, 10%);
+        background-color: var(--nokor-w-b-3);
       }
     }
     
@@ -499,7 +499,7 @@ $modal-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275) !default;
       color: white;
       
       &:not([disabled]):hover {
-        background-color: darken($btn-success, 10%);
+        background-color: var(--nokor-w-b-3);
       }
     }
     
@@ -508,7 +508,7 @@ $modal-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275) !default;
       color: white;
       
       &:not([disabled]):hover {
-        background-color: darken($btn-warning, 10%);
+        background-color: var(--nokor-w-b-3);
       }
     }
     
@@ -517,7 +517,7 @@ $modal-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275) !default;
       color: white;
       
       &:not([disabled]):hover {
-        background-color: darken($btn-secondary, 10%);
+        background-color: var(--nokor-w-b-3);
       }
     }
     

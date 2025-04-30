@@ -119,5 +119,5 @@ watch(() => props.studentId, (newId) => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/table.scss";
+@use "@/assets/styles/table.scss" as table;
 </style>
