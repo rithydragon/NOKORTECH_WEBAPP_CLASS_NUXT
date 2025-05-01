@@ -1,8 +1,9 @@
 <template>
-  <RTYHead :title="$t('user_management')"/>
+  <RTYHead :title="$t('user_management')" />
   <RTPageWrapper>
     <div class="flex justify-between items-center mb-6">
       <h1 class="text-2xl font-bold">{{ $t('user_management') }}</h1>
+      <UButton :label="$t('add')" icon="i-heroicons-plus" @click="actionClickCreate" />
     </div>
 
     <RTYTable ref="dataTable" :api="{ url: '/api/user/list', method: 'POST' }" :columns="columns" :data="localData"
@@ -86,7 +87,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <UFormGroup v-if="isCreate" label="Password" required>
-            <UInput v-model="model.Password" type="password" required  />
+            <UInput v-model="model.Password" type="password" required />
           </UFormGroup>
           <UFormGroup label="Gender">
             <USelect v-model="model.Gender" :options="['Male', 'Female', 'Custom']" />
@@ -95,7 +96,8 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <UFormGroup label="User Type">
-            <USelect v-model="model.UserType" :options="['Admin', 'User', 'Manager','General','System','Student','Teacher']" />
+            <USelect v-model="model.UserType"
+              :options="['Admin', 'User', 'Manager', 'General', 'System', 'Student', 'Teacher']" />
           </UFormGroup>
 
           <UFormGroup label="Date of Birth">
@@ -148,8 +150,8 @@ notify('Profile updated successfully!')
 // Table columns configuration
 const columns = [
   { data: 'UserCode', label: t('code') },
-  { data: 'UserActive', label: t(''),slot: true },
-  { data: 'Name', label: t('name')},
+  { data: 'UserActive', label: t(''), slot: true },
+  { data: 'Name', label: t('name') },
   {
     data: 'NameEnglish', label: t('english_name'),
     class: row => row.highlight ? 'text-green-600 font-bold' : '', // Dynamic class
@@ -190,7 +192,7 @@ const emptyUser = {
   NameEnglish: '',
   Username: '',
   Email: '',
-  Password:'',
+  Password: '',
   Gender: '',
   UserType: '',
   DateOfBirth: model.DateOfBirth ? `${model.DateOfBirth} 00:00:00` : null,
@@ -228,7 +230,7 @@ const statusColor = (status) => {
 // Initialize form for creating new user
 const actionClickCreate = () => {
   isCreate.value = true
-  model.value = {...emptyUser }
+  model.value = { ...emptyUser }
   operationType.value = 'create'
   isSlideoverOpen.value = true
 }
@@ -249,7 +251,7 @@ const loadUser = (user) => {
   model.Username = user.Username
   model.Email = user.Email
   model.Password = user.Password,
-  model.Gender = user.Gender
+    model.Gender = user.Gender
   model.UserType = user.UserType
   model.DateOfBirth = user.DateOfBirth ? user.DateOfBirth.substring(0, 10) : ''
   model.PlaceOfBirth = user.PlaceOfBirth
@@ -261,7 +263,7 @@ const loadUser = (user) => {
 const queryParams = useQueryParams() // ✅ No import needed
 const viewUser = (data) => {
   const path = '/users/userManagement/info'
-  queryParams(path, data,'user') // ✅ No error here
+  queryParams(path, data, 'user') // ✅ No error here
 }
 
 // Handle form submission
@@ -313,14 +315,14 @@ const actionDelete = async (data) => {
 const deleteUser = async (id) => {
   try {
     // Pass ID as query param since GET doesn't support body
-    const { data,error} = await useHttp(`/api/user/delete?Id=${id}`)
+    const { data, error } = await useHttp(`/api/user/delete?Id=${id}`)
     // const { data,error} = await useHttp(`/api/user/delete`, {
     //   method: 'GET',
     //   data: { Id: id }, // 👈 Correct way to pass query string in most fetch wrappers  // <- This becomes ?Id=123 in the URL
     // });
 
-    if(error.value) console.log("Failed to delete : ",error.value?.message)
-    else{
+    if (error.value) console.log("Failed to delete : ", error.value?.message)
+    else {
       reloadTable()
       console.log(t('user_deleted_successfully'), 'success');
     }

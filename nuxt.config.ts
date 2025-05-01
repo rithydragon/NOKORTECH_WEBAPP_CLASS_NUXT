@@ -172,6 +172,19 @@ export default defineNuxtConfig({
   //     "/img/*.m4a": { headers: { "Content-Type": "audio/mp4" } },
   //   },
   // },
+  // vite: {
+  //   build: {
+  //     chunkSizeWarningLimit: 1000, // in kB
+  //     rollupOptions: {
+  //       output: {
+  //         manualChunks: {
+  //           // Group large dependencies
+  //           'vendor': ['vue', 'pinia', 'some-large-library'],
+  //         }
+  //       }
+  //     }
+  //   }
+  // },
   // If using Nitro server
   nitro: {
     routeRules: {
@@ -181,7 +194,7 @@ export default defineNuxtConfig({
           'Access-Control-Allow-Credentials': 'true',
           'Access-Control-Allow-Origin': process.env.NODE_ENV === 'development'
             ? 'http://localhost:3000'
-            : 'https://your-production-domain.com'
+            : 'https://nokortech-teacher-class-nodejs.onrender.com'
         }
       }
     }
